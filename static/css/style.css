@@ -15,12 +15,22 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
     font-family: "Lora", serif;
     line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -41,8 +51,8 @@ body {
     font-family: "Cormorant Garamond", serif;
     font-size: 4.2rem;
     font-weight: 600;
-    color: var(--primary);
     line-height: 1;
+    color: var(--primary);
 }
 
 .site-subtitle {
@@ -54,9 +64,9 @@ body {
 
 .site-languages {
     margin: 10px 0 0;
-    color: var(--text-soft);
     font-size: 1.1rem;
     letter-spacing: 0.3px;
+    color: var(--text-soft);
 }
 
 .navbar {
@@ -68,11 +78,11 @@ body {
 }
 
 .navbar a {
-    color: var(--primary);
-    text-decoration: none;
-    font-size: 1rem;
     padding: 8px 10px;
-    transition: 0.2s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: color 0.2s ease;
 }
 
 .navbar a:hover {
@@ -92,30 +102,30 @@ body {
 }
 
 .hero-text h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 3rem;
-    color: var(--primary);
     margin-top: 0;
     margin-bottom: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
     line-height: 1.1;
+    color: var(--primary);
 }
 
 .hero-text p {
+    margin-bottom: 28px;
     font-size: 1.08rem;
     color: var(--text-soft);
-    margin-bottom: 28px;
 }
 
 .hero-image img {
     width: 100%;
-    border-radius: 24px;
     border: 1px solid var(--gold-soft);
+    border-radius: 24px;
     box-shadow: 0 12px 30px var(--shadow);
 }
 
 .page-header {
-    text-align: center;
     margin-bottom: 35px;
+    text-align: center;
 }
 
 .page-header h2 {
@@ -126,43 +136,45 @@ body {
 }
 
 .page-header p {
-    color: var(--text-soft);
     max-width: 760px;
     margin: 0 auto;
+    color: var(--text-soft);
 }
 
 .btn {
     display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid var(--primary);
+    border-radius: 999px;
     background: var(--primary);
     color: var(--white);
-    text-decoration: none;
-    border: 1px solid var(--primary);
-    padding: 13px 24px;
-    border-radius: 999px;
     font-size: 0.98rem;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .btn:hover {
     background: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
 .card {
-    background: var(--white);
+    margin-bottom: 24px;
+    padding: 28px;
     border: 1px solid var(--gold-soft);
     border-radius: 22px;
-    padding: 28px;
-    margin-bottom: 24px;
+    background: var(--white);
     box-shadow: 0 10px 24px var(--shadow);
 }
 
 .card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
     font-family: "Cormorant Garamond", serif;
     font-size: 2rem;
     color: var(--primary);
-    margin-top: 0;
-    margin-bottom: 12px;
 }
 
 .elegant-card {
@@ -191,8 +203,8 @@ body {
     width: 100%;
     height: 280px;
     object-fit: cover;
-    border-radius: 20px;
     border: 1px solid var(--gold-soft);
+    border-radius: 20px;
     box-shadow: 0 10px 24px var(--shadow);
 }
 
@@ -204,8 +216,8 @@ body {
 
 .review-author {
     margin-top: 14px;
-    color: var(--primary);
     font-weight: 600;
+    color: var(--primary);
 }
 
 .form-card form {
@@ -223,33 +235,38 @@ input,
 textarea {
     width: 100%;
     padding: 12px 14px;
-    border-radius: 12px;
     border: 1px solid rgba(80, 60, 50, 0.18);
+    border-radius: 12px;
+    background: #fffdfb;
     font-family: "Lora", serif;
     font-size: 1rem;
-    background: #fffdfb;
 }
 
 textarea {
+    min-height: 140px;
     resize: vertical;
 }
 
+button {
+    font-family: "Lora", serif;
+}
+
 .success-message {
-    background: #f6efe5;
-    border: 1px solid var(--gold-soft);
-    color: var(--primary);
-    padding: 12px 14px;
-    border-radius: 12px;
     margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid var(--gold-soft);
+    border-radius: 12px;
+    background: #f6efe5;
+    color: var(--primary);
 }
 
 .site-footer {
-    text-align: center;
-    padding: 35px 0;
-    background: #f2eae2;
-    border-top: 1px solid var(--gold-soft);
-    color: var(--text-soft);
     margin-top: 40px;
+    padding: 35px 0;
+    border-top: 1px solid var(--gold-soft);
+    background: #f2eae2;
+    color: var(--text-soft);
+    text-align: center;
 }
 
 .site-footer p {
@@ -259,6 +276,12 @@ textarea {
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .hero-text,
+    .hero-image {
+        text-align: center;
     }
 
     .three-columns {
@@ -281,31 +304,98 @@ textarea {
     .page-header h2 {
         font-size: 2.3rem;
     }
+
+    .main-content {
+        padding: 40px 0;
+    }
 }
 
 @media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
     .container {
         width: 92%;
     }
 
+    .site-header {
+        padding: 28px 0 20px;
+    }
+
     .site-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     .site-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .site-languages {
+        font-size: 1rem;
     }
 
     .navbar {
-        gap: 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
     }
 
     .navbar a {
-        font-size: 0.95rem;
         padding: 6px 8px;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 30px 0;
+    }
+
+    .hero {
+        gap: 22px;
+        margin-bottom: 32px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+
+    .hero-text p {
+        margin-bottom: 22px;
+        font-size: 1rem;
+    }
+
+    .page-header h2 {
+        font-size: 2.1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
     }
 
     .card {
-        padding: 22px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .card h3 {
+        font-size: 1.7rem;
+    }
+
+    .gallery img {
+        height: auto;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 16px;
+    }
+
+    .site-footer {
+        padding: 25px 0;
+        font-size: 0.95rem;
     }
 }
