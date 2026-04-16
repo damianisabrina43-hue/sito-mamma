@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Recensioni - Rosanna Vicinanza{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>Recensioni</h2>
+    <p>Le parole di chi ha già vissuto un’esperienza di visita guidata.</p>
+</section>
+
+<section>
+    {% for recensione in recensioni %}
+        <div class="card review-card">
+            <p class="review-text">“{{ recensione.testo }}”</p>
+            <p class="review-author">{{ recensione.autore }}</p>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}

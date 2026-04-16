@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Rosanna Vicinanza{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h2>Scopri luoghi straordinari con uno sguardo autentico</h2>
+        <p>
+            Visite guidate tra Roma, Puglia e Basilicata, pensate per chi desidera
+            vivere il territorio attraverso arte, storia, cultura e bellezza.
+        </p>
+        <a href="{{ url_for('itinerari') }}" class="btn">Scopri gli itinerari</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Rosanna Vicinanza - Visite guidate">
+    </div>
+</section>
+
+<section class="intro-section">
+    <div class="card elegant-card">
+        <h3>Un’esperienza culturale curata con passione</h3>
+        <p>
+            Ogni visita è progettata per offrire un’esperienza coinvolgente, elegante e personalizzata,
+            adatta a coppie, famiglie, piccoli gruppi e viaggiatori interessati alla scoperta autentica del territorio.
+        </p>
+    </div>
+</section>
+
+<section class="three-columns">
+    <div class="card">
+        <h3>Roma</h3>
+        <p>Itinerari tra monumenti iconici, piazze storiche e racconti senza tempo.</p>
+    </div>
+
+    <div class="card">
+        <h3>Puglia</h3>
+        <p>Visite tra borghi, cattedrali, tradizioni locali e scorci indimenticabili.</p>
+    </div>
+
+    <div class="card">
+        <h3>Basilicata</h3>
+        <p>Esperienze tra paesaggi suggestivi, storia antica e meraviglie in pietra.</p>
+    </div>
+</section>
+{% endblock %}

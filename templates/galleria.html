@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Galleria - Rosanna Vicinanza{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>Galleria</h2>
+    <p>Alcuni scorci delle esperienze, dei luoghi e degli itinerari proposti.</p>
+</section>
+
+<section class="gallery">
+    <img src="{{ url_for('static', filename='images/tour1.jpg') }}" alt="Tour guidato 1">
+    <img src="{{ url_for('static', filename='images/tour2.jpg') }}" alt="Tour guidato 2">
+    <img src="{{ url_for('static', filename='images/tour3.jpg') }}" alt="Tour guidato 3">
+</section>
+{% endblock %}

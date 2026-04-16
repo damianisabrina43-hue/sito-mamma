@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Itinerari - Rosanna Vicinanza{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>Itinerari</h2>
+    <p>Esperienze guidate tra arte, storia, territorio e identità locali.</p>
+</section>
+
+<section>
+    {% for itinerario in itinerari %}
+        <div class="card itinerary-card">
+            <h3>{{ itinerario.titolo }}</h3>
+            <p>{{ itinerario.descrizione }}</p>
+            <p><strong>Zona:</strong> {{ itinerario.luogo }}</p>
+            <p><strong>Durata:</strong> {{ itinerario.durata }}</p>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}
